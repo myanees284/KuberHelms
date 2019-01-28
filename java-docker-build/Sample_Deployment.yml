@@ -1,16 +1,16 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: hellosample1
+  name: helmsample
 spec:
   selector:
     matchLabels:
-      app: hellosample1
+      app: helmsample
   replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: hellosample1
+        app: helmsample
     spec:
       containers:
       - name: testla
