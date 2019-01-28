@@ -1,0 +1,22 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: hellosample1
+spec:
+  selector:
+    matchLabels:
+      app: hellosample1
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: hellosample1
+    spec:
+      containers:
+      - name: testla
+        image: myanees/aneesm
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 2123
+      imagePullSecrets:
+        - name: regcred
