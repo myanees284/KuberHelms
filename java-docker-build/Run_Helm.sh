@@ -1,5 +1,5 @@
 #!/bin/bash
-imageName="myanees/aneesm"
+imageName="myanees/testla"
 timestamp=$(date +%s)
 tagVal=v$timestamp
 imagever=$imageName:v$timestamp
