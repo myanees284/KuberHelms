@@ -17,9 +17,10 @@ echo $DEPNAME
 if [[ $DEPNAME == *"helmsample"* ]]
 then
   echo "Updating container IMAGE"
-  kubectl set image deployments/hellosample1 testla=$imagever
+  helm upgrade love local/test --set=$imagever
 else
   echo "Creating HELM PACKAGE"
-#  kubectl create -f Sample_Deployment.yml
+helm package test1
+helm install test1-0.1.1.tgz --name=helmsample
 #  kubectl create -f exposeservice.yml
 fi
