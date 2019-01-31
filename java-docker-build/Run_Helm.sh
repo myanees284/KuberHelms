@@ -21,6 +21,6 @@ then
 else
   echo "Creating HELM PACKAGE"
 helm package test1
-helm install test1-0.1.1.tgz --name=helmsample
+helm install test1-0.1.2.tgz --name=helmsample
 #  kubectl create -f exposeservice.yml
 fi
