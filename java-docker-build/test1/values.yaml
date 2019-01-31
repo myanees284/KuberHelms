@@ -1,0 +1,25 @@
+replicaCount: 1
+Deployment:
+  name: helmDeployment
+  service: helmService
+image:
+    repository: myanees/testla
+    tag: latest
+    pullPolicy: Always
+nameOverride: ""
+fullnameOverride: ""
+service:
+    type: NodePort
+    port: 2123
+    nodePort: 30091
+ingress:
+    enabled: false
+    annotations: {}
+    path: /
+    hosts:
+        - chart-example.local
+    tls: []
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
