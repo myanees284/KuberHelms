@@ -26,4 +26,4 @@ else
   echo "Creating HELM PACKAGE"
   helm package test1
   helm install test1-0.1.2.tgz --name=helmsample
-#fi
+fi
