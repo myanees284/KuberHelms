@@ -20,7 +20,7 @@ echo $DEPNAME
 if [[ $DEPNAME == *"helmsample"* ]]
 then
   echo "Updating container IMAGE"
-  helm upgrade helmsample test1 --set=image.tag=$tagVal
+  helm upgrade helmsample test1-0.1.2.tgz --set=image.tag=$tagVal
 else
   echo "Creating HELM PACKAGE"
   helm package test1
