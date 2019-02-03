@@ -31,6 +31,6 @@ public class StatusTest {
   @Test
   public void shouldReceiveIdleStatus() {
     String responseMsg = target.path("status").request().get(String.class);
-    assertEquals("{\"status\": \"HELM PACKAGE091\"}\n", responseMsg);
+    assertEquals("{\"status\": \"HELM PACKAGE092\"}\n", responseMsg);
   }
 }
